@@ -1,107 +1,41 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Ovedisa Inventory System Management
 
----
+## Descripcion
+Esta aplicacion esta diseñada para gestionar inventarios con una interfaz moderna y sencilla. Incluye funcionalidades como un dashboard interactivo, gestion de productos y una pagina informativa sobre los desarrolladores.
 
-# svelte app
+## Estructura del Proyecto
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+### Archivos Principales:
+- **App.svelte:** Componente principal que coordina las paginas y el sidebar.
+- **Sidebar.svelte:** Menu lateral para navegar entre las distintas paginas.
+- **WelcomePage.svelte:** Pantalla de bienvenida con opcion para entrar al dashboard.
+- **Dashboard.svelte:** Muestra una grafica interactiva y un resumen del inventario.
+- **InventoryPage.svelte:** Gestion de productos del inventario (crear, actualizar, eliminar).
+- **AboutUs.svelte:** Informacion sobre los desarrolladores del proyecto.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+### Scripts
+- **`npm run dev`**: Inicia la aplicacion en modo desarrollo con recarga en vivo.
+- **`npm run build`**: Genera los archivos optimizados para produccion.
+- **`npm start`**: Sirve la aplicacion como una SPA. (Single Page Application)
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+## Dependencias
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+### Principales:
+- **Svelte:** Framework principal del proyecto.
+- **SvelteKit:** Framework para crear aplicaciones web con Svelte
 
 
-## Single-page app mode
+### Desarrollo:
+- **Serve:** Servidor para producción (`npm start`).
+- **Sirv-cli:** Servidor ligero utilizado en modo desarrollo.
+- **Rollup:** Bundler utilizado para construir la aplicación.
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+## Uso
+1. Instalar dependencias: `npm install`
+2. Iniciar modo desarrollo: `npm run dev`
+3. Generar archivos optimizados para producción: `npm run build`
+4. Ejecutar en producción: `npm start` y abrir en el host que asigne automaticamente.
 
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+## Estilo
+El diseño esta basado en una combinacion de un sidebar y un contenedor principal con colores neutros para resaltar el contenido.
