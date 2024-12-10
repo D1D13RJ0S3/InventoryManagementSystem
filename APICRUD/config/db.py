@@ -1,16 +1,18 @@
 from sqlmodel import Session, SQLModel, create_engine
+import os
 
-# Configuración del motor
-engine = create_engine(
-    'postgresql://databasedidier_user:1lPiwUxNLn5GNNAnJk5hQTsyHnU57eDa@dpg-ct3rb30gph6c73c2agpg-a.oregon-postgres.render.com/databasedidier',
-    echo=True
-)
+db_user = os.getenv("DB_USER")
+db_password = os.getenv("DB_PASSWORD")
+db_host = os.getenv("DB_HOST")
+db_port = os.getenv("DB_PORT")
+db_name = os.getenv("DB_NAME")
 
-# Crear tablas y datos iniciales
+db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+engine = create_engine(db_url)
+
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
-
 # Función para obtener sesiones  
 def get_session():
     with Session(engine) as session:
-        yield session 
+        yield session
