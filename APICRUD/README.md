@@ -48,10 +48,11 @@ Crea un **entorno virtual** llamado `venv` e instala las dependencias necesarias
 
 1. Abre **Visual Studio Code (VSCode)** y abre la carpeta del proyecto.
 2. Abre la **Terminal** dentro de VSCode (`Ctrl + ~`).
-3. **Crea un entorno virtual** llamado `venv` (asegúrate de usar Python 3.12):
+3. **Crea un entorno virtual e instala las dependencias** llamado `venv` y tambien de instalar todas las dependencias que hay en el archivo requirements.txt (asegúrate de usar Python 3.12):
 
    ```bash
    python3.12 -m venv venv
+   pip install -r requirements.txt
    ```
 
 ### 2. Ejecutar el Proyecto con `start.bat`
@@ -65,3 +66,4 @@ Este proyecto incluye un archivo `start.bat` que simplifica la ejecución de la 
    ```bash
    .\start.bat
    ```
+
