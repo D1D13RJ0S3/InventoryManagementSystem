@@ -38,11 +38,12 @@ Esta aplicacion esta diseñada para gestionar inventarios con una interfaz moder
 - Instalar npm en la carpeta frontend ejecutando `npm install` en la consola
 
 
-## Uso
-1. Instalar dependencias: `npm install`
+## Uso 
+### Modo Desarrollo
 2. Iniciar modo desarrollo: `npm run dev`
-3. Generar archivos optimizados para producción: `npm run build`
-4. Ejecutar en producción: `npm start` y abrir en el host que asigne automaticamente.
+### Modo Produccion (No se actualiza automaticamente si se hace un cambio)
+3. Ejecutar primero: `npm run build`
+4. Ejecutar seguidamente: `npm start` 
 
 ## Estilo
 El diseño esta basado en una combinacion de un sidebar y un contenedor principal con colores neutros para resaltar el contenido.
