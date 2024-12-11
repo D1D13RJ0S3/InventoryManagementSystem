@@ -47,8 +47,8 @@ External Dependencies:
     // Creates the product object
     const product = {
       name: productName,
-      precio: parseFloat(productPrice),
-      cantidad: parseInt(productQuantity),
+      price: parseFloat(productPrice),
+      quantity: parseInt(productQuantity),
     };
 
     // Attempts to send data to the server
