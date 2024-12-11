@@ -38,7 +38,6 @@ Esta aplicacion esta diseñada para gestionar inventarios con una interfaz moder
 - Instalar npm en la carpeta frontend ejecutando `npm install` en la consola
 
 
-
 ## Uso
 1. Instalar dependencias: `npm install`
 2. Iniciar modo desarrollo: `npm run dev`
