@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "https://ovedisasysteminventory.onrender.com"
+    "http://localhost:8000"
 ]
 
 app.add_middleware(
@@ -30,7 +30,7 @@ them from the `products` router module.
 Attributes:
     origins (list): A list of allowed origins that can make requests to the 
                      API. In this case, it allows requests from the 
-                     'https://ovedisasysteminventory.onrender.com' domain.
+                     'http://localhost:8000' domain.
 
 Methods:
     add_middleware: Adds the CORS middleware to the app to enable 
@@ -44,3 +44,4 @@ Example:
     The application will accept API requests from the specified origins 
     and route product-related operations accordingly.
 """
+
