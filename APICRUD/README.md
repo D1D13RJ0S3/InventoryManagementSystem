@@ -30,11 +30,11 @@ La API permite realizar las siguientes operaciones sobre los productos:
    - Para Linux: Instálalo usando el gestor de paquetes, por ejemplo, `sudo apt-get install sqlite3`.
 
 ### Configuración de la Base de Datos
-1. Crea una base de datos con sqlite
-2. Navega a la carpeta `database` en el directorio del proyecto.
-3. Abre el archivo `db_config.py`.
-4. Localiza la variable `sqlite_file_name`.
-5. Establece el `sqlite_file_name` con el nombre del archivo .db  que creaste para la base de datos SQLite, por ejemplo:
+1. Crea una base de datos con sqlite (solo tienes que darle click al boton new database y guardarla, posteriormente puedes salir de ahi)
+3. Navega a la carpeta `database` en el directorio del proyecto.
+4. Abre el archivo `db_config.py`.
+5. Localiza la variable `sqlite_file_name`.
+6. Establece el `sqlite_file_name` con el nombre del archivo .db  que creaste para la base de datos SQLite, por ejemplo:
    ```python
    sqlite_file_name = "inventory.db"
    ```
