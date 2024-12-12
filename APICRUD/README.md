@@ -53,6 +53,7 @@ Crea un **entorno virtual** llamado `venv` e instala las dependencias necesarias
 
    ```bash
    python3.12 -m venv venv
+   venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
