@@ -52,7 +52,7 @@ Crea un **entorno virtual** llamado `venv` e instala las dependencias necesarias
 3. **Crea un entorno virtual e instala las dependencias** llamado `venv` y tambien de instalar todas las dependencias que hay en el archivo requirements.txt (asegúrate de usar Python 3.12):
 
    ```bash
-   python3.12 -m venv venv
+   python3.12 -m venv venv | python -m venv venv
    venv\Scripts\activate
    pip install -r requirements.txt
    ```
