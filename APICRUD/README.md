@@ -25,7 +25,7 @@ La API permite realizar las siguientes operaciones sobre los productos:
 
 ### Instalación de SQLite
 1. **Instalar SQLite**:
-   - Para Windows: Descárgalo desde el sitio web oficial de SQLite (https://www.sqlite.org/download.html).
+   - Para Windows: Descárgalo desde el sitio web oficial de SQLite (https://sqlitebrowser.org/dl/) y elige la version standard.
    - Para macOS: Generalmente ya está preinstalado o puedes instalarlo mediante Homebrew con `brew install sqlite`.
    - Para Linux: Instálalo usando el gestor de paquetes, por ejemplo, `sudo apt-get install sqlite3`.
 
