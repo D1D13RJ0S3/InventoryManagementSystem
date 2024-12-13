@@ -161,7 +161,7 @@ External Dependencies:
         on:updateSuccess={handleUpdateSuccess} 
       />
       
-      <DeleteButton {productos} bind:selectedProducts on:deleteSuccess={handleDeleteSuccess} />
+      <DeleteButton products={productos} bind:selectedProducts on:deleteSuccess={handleDeleteSuccess} />
     </div>
   </section>
 

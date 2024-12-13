@@ -100,46 +100,46 @@ External Dependencies:
 
 {#if showAlert}
   <div class="alert">
-    You must select exactly one product to update.
+    Debes seleccionar solo un producto para actualizar.
   </div>
 {/if}
 
 {#if showUpdateDialog}
   <div class="popup-overlay">
     <div class="popup-content">
-      <h3>Update</h3>
+      <h3>Actualizar Producto</h3>
       <form on:submit|preventDefault={confirmUpdate}>
-        <label for="name">Name:</label>
+        <label for="name">Nombre:</label>
         <input 
           type="text" 
           id="name" 
           bind:value={updatedData.name} 
-          placeholder="New name"
+          placeholder="Nuevo Nombre"
           required
         >
-        <span>(Current: {currentData.name})</span>
+        <span>(Actual: {currentData.name})</span>
 
-        <label for="price">Price:</label>
+        <label for="price">Precio:</label>
         <input 
           type="number" 
           id="price" 
           bind:value={updatedData.price} 
           min="0" 
-          placeholder="New price"
+          placeholder="Nuevo Precio"
           required
         >
-        <span>(Current: {currentData.price})</span>
+        <span>(Actual: {currentData.price})</span>
 
-        <label for="quantity">Quantity:</label>
+        <label for="quantity">Cantidad:</label>
         <input 
           type="number" 
           id="quantity" 
           bind:value={updatedData.quantity} 
           min="0" 
-          placeholder="New quantity"
+          placeholder="Nueva Cantidad"
           required
         >
-        <span>(Current: {currentData.quantity})</span>
+        <span>(Actual: {currentData.quantity})</span>
 
         <div class="popup-actions">
           <button type="button" on:click={cancelUpdate}>Cancelar</button>
