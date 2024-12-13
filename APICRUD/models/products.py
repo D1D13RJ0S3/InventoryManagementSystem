@@ -12,8 +12,8 @@ class ProductBase(SQLModel):
     """
 
     name: str
-    cantidad: int
-    precio: float
+    quantity: int
+    price: float
 
 class Product(ProductBase, table=True):
     """
