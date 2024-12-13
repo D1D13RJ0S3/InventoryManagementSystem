@@ -7,8 +7,8 @@ class ProductBase(SQLModel):
 
     This model defines the core attributes for a product:
     - name: The name of the product.
-    - cantidad: The quantity of the product.
-    - precio: The price of the product.
+    - quantity: The quantity of the product.
+    - price: The price of the product.
     """
 
     name: str
