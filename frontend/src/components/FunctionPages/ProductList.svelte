@@ -50,8 +50,8 @@ External Dependencies:
           />
         </td>
         <td>{product.name}</td>
-        <td>{product.cantidad}</td>
-        <td>{formatToCOP(product.precio)}</td>
+        <td>{product.quantity}</td>
+        <td>{formatToCOP(product.price)}</td>
       </tr>
     {/each}
   </tbody>

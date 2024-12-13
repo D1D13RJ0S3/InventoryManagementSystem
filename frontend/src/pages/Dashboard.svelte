@@ -44,7 +44,7 @@ External Dependencies:
       let data = await response.json();
       console.log('Products received:', data);
       products = data
-        .sort((a, b) => b.precio - a.precio)
+        .sort((a, b) => b.price - a.price)
         .slice(0, PRODUCTS_LIMIT);
 
       console.log('Filtered products for the chart:', products);
@@ -75,7 +75,7 @@ External Dependencies:
             datasets: [
               {
                 label: 'Precio',
-                data: products.map(product => product.precio),
+                data: products.map(product => product.price),
                 backgroundColor: 'rgba(54, 162, 235, 0.6)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
@@ -167,7 +167,7 @@ External Dependencies:
     if (chart) {
       console.log('Updating chart with new data...');
       chart.data.labels = products.map(product => product.name);
-      chart.data.datasets[0].data = products.map(product => product.precio);
+      chart.data.datasets[0].data = products.map(product => product.price);
       chart.update();
       console.log('Chart updated.');
     }
