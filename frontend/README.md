@@ -30,12 +30,20 @@ Esta aplicacion esta diseñada para gestionar inventarios con una interfaz moder
 - **Sirv-cli:** Servidor ligero utilizado en modo desarrollo.
 - **Rollup:** Bundler utilizado para construir la aplicación.
 
+## Requisitos Previos
 
-## Uso
-1. Instalar dependencias: `npm install`
+### Instalar Node.js
+- Descargar e instalar Node.js especificamente la version 22.12.0 desde [nodejs.org](https://nodejs.org/dist/v22.12.0/node-v22.12.0-x64.msi)
+- Verificar que Node.js se instalo correctamente ejecutando `node -v` en la consola del equipo
+- Instalar npm en la carpeta frontend ejecutando `npm install` en la consola
+
+
+## Uso 
+### Modo Desarrollo
 2. Iniciar modo desarrollo: `npm run dev`
-3. Generar archivos optimizados para producción: `npm run build`
-4. Ejecutar en producción: `npm start` y abrir en el host que asigne automaticamente.
+### Modo Produccion (No se actualiza automaticamente si se hace un cambio)
+3. Ejecutar primero: `npm run build`
+4. Ejecutar seguidamente: `npm start` 
 
 ## Estilo
 El diseño esta basado en una combinacion de un sidebar y un contenedor principal con colores neutros para resaltar el contenido.
