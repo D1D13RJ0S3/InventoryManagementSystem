@@ -47,7 +47,7 @@ Asegúrate de tener Python 3.12 instalado (recomendado por compatibilidad). Si n
 
 Crea un **entorno virtual** llamado `venv` e instala las dependencias necesarias siguiendo estos pasos:
 
-1. Abre **Visual Studio Code (VSCode)** y abre la carpeta del proyecto.
+1. Desde **Visual Studio Code (VSCode)** abre la carpeta del proyecto.
 2. usa el comando (`ctrl + p`) y realiza la busqueda (`>python select interpreter`) y posteriormente se oprime (`Create Virtual Environment`), despues elijes en los requerimentos el archivo txt que esta en el proyecto.
 4. Abre la **Terminal** dentro de VSCode (`Ctrl + ~`).
 5. Asegurate de estar dentro de la ruta de la carpeta APICRUD
