@@ -51,12 +51,7 @@ Crea un **entorno virtual** llamado `venv` e instala las dependencias necesarias
 2. usa el comando (`ctrl + p`) y realiza la busqueda (`>python select interpreter`) posteriormente oprime (`Create Virtual Environment`), despues elijes en los requerimentos el archivo txt que esta en el proyecto.
 4. Abre la **Terminal** dentro de VSCode (`Ctrl + ~`).
 5. Asegurate de estar dentro de la ruta de la carpeta APICRUD
-6. **Crea un entorno virtual e instala las dependencias** llamado `venv` y tambien de instalar todas las dependencias que hay en el archivo requirements.txt (asegúrate de usar Python 3.12):
 
-   ```bash
-   venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
 
 ### 2. Ejecutar el Proyecto con `start.bat`
 
