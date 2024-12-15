@@ -241,6 +241,7 @@ External Dependencies:
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
   }
 
   .popup-content {
@@ -251,6 +252,7 @@ External Dependencies:
     text-align: center;
     max-width: 400px;
     width: 90%;
+    z-index: 100;
   }
 
   .popup-content h3 {
