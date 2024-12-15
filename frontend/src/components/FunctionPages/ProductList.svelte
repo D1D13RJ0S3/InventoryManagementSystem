@@ -1,44 +1,45 @@
 <!--
 Component: ProductList.svelte
-Description: This component displays a list of products in a table format.
-It allows users to select products using checkboxes and displays product details such as name, quantity, and price.
+Description: This component displays a list of products in a table format, allowing users to select products for further actions.
 Properties:
-  - filteredProducts (array): The list of filtered products to display.
-  - selectedProducts (Set): A set of selected product IDs.
+  - filteredProducts (array): List of products to display, filtered based on search criteria.
+  - selectedProducts (Set): Set of product IDs selected for actions like update or delete.
 Internal Variables:
   - None
 Main Functions:
-  - toggleSelect(productId): Toggles the selection of a product by its ID.
+  - toggleSelect(productId): Toggles the selection of a product based on its ID.
 External Dependencies:
-  - formatToCOP: A utility function to format prices to Colombian Pesos.
+  - formatToCOP from '../../lib/utils.js': Function to format numbers to Colombian Peso (COP) currency format.
 -->
+
 <script>
   import { formatToCOP } from '../../lib/utils.js';
 
-  // Receives the filtered products from the parent component
   export let filteredProducts = [];
   export let selectedProducts = new Set();
 
-  // Function to toggle the selection of products
+  /**
+   * Toggles the selection of a product.
+   * @param {number} productId - ID of the product to select or deselect.
+   */
   function toggleSelect(productId) {
     if (selectedProducts.has(productId)) {
       selectedProducts.delete(productId);
     } else {
       selectedProducts.add(productId);
     }
-    selectedProducts = new Set(selectedProducts); // Force reactivity
+    selectedProducts = new Set(selectedProducts); 
   }
 </script>
 
 <table>
-  <thead>
-    <tr>
-      <th>Seleccionar</th>
-      <th>Nombre</th>
-      <th>Cantidad</th>
-      <th>Precio</th>
-    </tr>
-  </thead>
+  <colgroup>
+    <col style="width:10%">
+    <col style="width:30%"> 
+    <col style="width:15%"> 
+    <col style="width:15%"> 
+    <col style="width:30%"> 
+  </colgroup>
   <tbody>
     {#each filteredProducts as product}
       <tr>
@@ -52,25 +53,41 @@ External Dependencies:
         <td>{product.name}</td>
         <td>{product.quantity}</td>
         <td>{formatToCOP(product.price)}</td>
+        <td>{formatToCOP(product.quantity * product.price)}</td>
       </tr>
     {/each}
   </tbody>
 </table>
 
 <style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  
+  * {
+    box-sizing: border-box;
   }
 
-  th, td {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0; 
+  }
+
+  td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  th {
-    background-color: #f4f4f4;
+  
+  tbody tr:first-child td {
+    border-top: none;
+  }
+
+  
+  tr:hover {
+    background-color: #f1f1f1;
   }
 </style>
